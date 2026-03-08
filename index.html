@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bangunin Sahur</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:linear-gradient(#0f2027,#203a43,#2c5364);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+/* kotak utama */
+.kotak{
+    background:rgba(0,0,0,0.5);
+    padding:40px;
+    border-radius:20px;
+}
+
+/* foto teman */
+img{
+    width:180px;
+    border-radius:20px;
+    border:4px solid white;
+    margin-bottom:15px;
+}
+
+/* tombol */
+button{
+    padding:12px 25px;
+    font-size:18px;
+    border:none;
+    border-radius:10px;
+    background:#ff9800;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ff6f00;
+}
+</style>
+</head>
+
+<body>
+
+<div class="kotak">
+
+<h1>🌙 Waktu Sahur</h1>
+
+<img src="foto.jpeg" alt="foto teman">
+
+<p id="pesan">Bangunin dia buat sahur 😴</p>
+
+<button onclick="sahur()">Bangunin!</button>
+
+<audio id="suara">
+<source src="sahur.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+<script>
+
+function sahur(){
+document.getElementById("pesan").innerHTML =
+"🍚 WOY BANGUN! SAHUR DULU! 😂";
+
+document.getElementById("suara").play();
+}
+
+</script>
+
+</body>
+</html>
